@@ -1,6 +1,6 @@
-##Python学习代码
+## Python学习代码
 
-###Python网络爬虫的应用
+### Python网络爬虫的应用
 
 + requests库的初步应用
 + beautifulsoup库
