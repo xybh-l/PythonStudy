@@ -25,12 +25,17 @@ except Exception as id:
     pass
 else:
     print("密码错误!")
-
-choice1 = input('请输入网络服务运行商(1.移动 2.电信 3.联通 4.校园网):')
-choice1 = int(choice1) + 1
+choice = input('1.自动登录 2.手动登录:')
+if choice == '1':
+    user = 201820180113
+    pwd = 888999
+    choice1 = '2'
+else:
+    choice1 = input('请输入网络服务运行商(1.移动 2.电信 3.联通 4.校园网):')
+    choice1 = int(choice1) + 1
+    user = input('请输入用户名:')
+    pwd = input('请输入密码:')
 ispchoice = '//*[@id="edit_body"]/div[2]/div[2]/div/span['+str(choice1) + ']/input'
-user = input('请输入用户名:')
-pwd = input('请输入密码:')
 username = driver.find_element_by_xpath('//*[@id="edit_body"]/div[2]/div[2]/form/input[3]')
 password = driver.find_element_by_xpath('//*[@id="edit_body"]/div[2]/div[2]/form/input[4]')
 isp = driver.find_element_by_xpath(ispchoice)
@@ -39,5 +44,3 @@ username.send_keys(user)
 password.send_keys(pwd)
 isp.click()
 submit.click()
-
-# message = driver.get('//*[@id="message"]').text
