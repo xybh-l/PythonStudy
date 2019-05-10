@@ -6,3 +6,5 @@
 + beautifulsoup库
 + 正则表达式的应用
 + selenium库的应用
++ XPath的基础应用
++ os库的简单使用
